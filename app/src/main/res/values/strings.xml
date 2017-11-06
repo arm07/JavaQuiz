@@ -20,4 +20,9 @@
     <string name="action_settings">Settings</string>
     <string name="text_hello">Hello,</string>
     <string name="text_title">Android Tutorials Hub</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="desk_inst">Following quiz provides Multiple Choice Questions (MCQs) related to Java and Android. You will have to read all the given answers and click over the correct answer. You can use Next Quiz button to check new set of questions in the quiz.</string>
 </resources>

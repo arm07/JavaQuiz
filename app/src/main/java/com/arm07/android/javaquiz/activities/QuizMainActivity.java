@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.arm07.android.javaquiz.R;
 
-public class MainActivity extends AppCompatActivity {
+public class QuizMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

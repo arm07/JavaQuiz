@@ -120,6 +120,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim()
                 , textInputEditTextPassword.getText().toString().trim())) {
 
+            Intent intent = new Intent(activity, DashboardActivity.class);
+            startActivity(intent);
             // To view the results of registered users as a list
             /**
             Intent accountsIntent = new Intent(activity, UsersListActivity.class);
