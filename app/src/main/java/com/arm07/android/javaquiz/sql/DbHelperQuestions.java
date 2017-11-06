@@ -15,6 +15,8 @@ import java.util.List;
  * Created by rashmi on 11/6/2017.
  */
 
+// DBHelper  class to add quiz questions to SQLite DB
+
 public class DbHelperQuestions extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     // Database Name

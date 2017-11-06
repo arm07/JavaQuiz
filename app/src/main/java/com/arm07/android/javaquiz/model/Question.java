@@ -4,6 +4,7 @@ package com.arm07.android.javaquiz.model;
  * Created by rashmi on 11/6/2017.
  */
 
+// POJO for Questions (Model Class)
 
 public class Question
 {
