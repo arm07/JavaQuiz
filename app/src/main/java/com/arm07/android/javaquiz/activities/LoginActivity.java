@@ -1,5 +1,6 @@
 package com.arm07.android.javaquiz.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
@@ -94,6 +95,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             include a case for register button clicked event
 
             */
+            case R.id.textViewLinkRegister:
+                // Navigate to RegisterActivity
+                Intent intentRegister = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(intentRegister);
+                break;
         }
     }
 
