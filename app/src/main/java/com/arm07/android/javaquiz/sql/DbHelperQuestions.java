@@ -33,16 +33,19 @@ public class DbHelperQuestions extends SQLiteOpenHelper {
     private static final String KEY_OPTD="optd"; //option d
     private SQLiteDatabase dbase;
 
+    private String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_QUEST + " ( "
+            + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_QUES
+            + " TEXT, " + KEY_ANSWER+ " TEXT, "+KEY_OPTA +" TEXT, "
+            +KEY_OPTB +" TEXT, "+KEY_OPTC +" TEXT, "+KEY_OPTD+" TEXT)";
+
+    private String DROP_USER_TABLE="DROP TABLE IF EXISTS " + TABLE_QUEST;
+
     public DbHelperQuestions(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
         dbase=db;
-        String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_QUEST + " ( "
-                + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_QUES
-                + " TEXT, " + KEY_ANSWER+ " TEXT, "+KEY_OPTA +" TEXT, "
-                +KEY_OPTB +" TEXT, "+KEY_OPTC +" TEXT, "+KEY_OPTD+" TEXT)";
         db.execSQL(sql);
         addQuestions();
         //db.close();
@@ -51,7 +54,7 @@ public class DbHelperQuestions extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
         // Drop older table if existed
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_QUEST);
+        db.execSQL(DROP_USER_TABLE);
         // Create tables again
         onCreate(db);
     }

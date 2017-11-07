@@ -56,13 +56,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
         //Drop User Table if exist
         db.execSQL(DROP_USER_TABLE);
-
         // Create tables again
         onCreate(db);
-
     }
 
     /**
@@ -116,7 +113,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 null,       //group the rows
                 null,       //filter by row groups
                 sortOrder); //The sort order
-
 
         // Traversing through all rows and adding to list
         if (cursor.moveToFirst()) {
@@ -176,7 +172,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * @return true/false
      */
     public boolean checkUser(String email) {
-
         // array of columns to fetch
         String[] columns = {
                 COLUMN_USER_ID
